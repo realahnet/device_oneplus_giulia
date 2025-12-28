@@ -44,6 +44,11 @@ PRODUCT_COPY_FILES += \
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint3-service.strongbox.nxp \
+    android.hardware.weaver-service.nxp
+
 # OpenDelta
 ifeq ($(TARGET_BUILD_GAPPS),true)
     PRODUCT_PACKAGES += op8650OpenDeltaOverlay
