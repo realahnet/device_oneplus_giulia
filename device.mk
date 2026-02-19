@@ -14,11 +14,20 @@ PRODUCT_PACKAGES += \
     tri-state-key-calibrate
 
 # Audio
+PRODUCT_PACKAGES += \
+    libar-acdb \
+    libar-gpr \
+    libar-gsl \
+    liblx-ar_util \
+    liblx-osal \
+    vendor.qti.hardware.AGMIPC@1.0 \
+    vendor.qti.hardware.AGMIPC@1.0-impl
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    $(LOCAL_PATH)/configs/audio/resourcemanager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml \
-    $(LOCAL_PATH)/configs/audio/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
+    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
+$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2780

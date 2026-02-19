@@ -15,6 +15,15 @@ DEVICE_PATH := device/oneplus/giulia
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP5D3BL1
 
+# Audio
+TARGET_PROVIDES_AUDIO_HAL := true
+TARGET_PROVIDES_LIBAGM := true
+TARGET_PROVIDES_LIBAR_PAL := true
+
+DEVICE_MANIFEST_FILE += \
+    hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/manifest_non_qmaa.xml \
+    hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/manifest_non_qmaa_extn.xml
+
 # Charging
 TARGET_CHARGE_RATE_MULTIPLIER := 1000
 
