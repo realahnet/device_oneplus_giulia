@@ -45,7 +45,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
     <density>
       <height>2780</height>
       <width>1264</width>
-      <density>560</density>
+      <density>540</density>
     </density>
   </densityMapping>
   <screenBrightnessMap interpolation="linear">
