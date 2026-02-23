@@ -1,5 +1,5 @@
 # ALS
-vendor.sensors.als_correction.grabrect=1010 150 1045 190
+vendor.sensors.als_correction.grabrect=755 50 795 120
 
 # Bluetooth
 bluetooth.device.default_name=OnePlus 13R
