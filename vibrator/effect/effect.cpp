@@ -52,7 +52,7 @@ const struct effect_stream* get_effect_stream(uint32_t effect_id) {
     using android::base::GetProperty;
     const struct effect_stream *selected_effects = effects;
     size_t effects_size = ARRAY_SIZE(effects);
-    std::string profile = GetProperty("persist.vendor.haptic_profile", "richtap");
+    std::string profile = GetProperty("persist.vendor.haptic_profile", "default");
 
     if ((effect_id & 0x8000) != 0) {
         effect_id &= 0x7fff;
@@ -63,7 +63,13 @@ const struct effect_stream* get_effect_stream(uint32_t effect_id) {
         }
     }
 
-    if (profile == "crisp") {
+    if (profile == "soft") {
+        selected_effects = effects_soft;
+        effects_size = ARRAY_SIZE(effects_soft);
+    } else if (profile == "richtap") {
+        selected_effects = effects_richtap;
+        effects_size = ARRAY_SIZE(effects_richtap);
+    } else if (profile == "crisp") {
         selected_effects = effects_crisp;
         effects_size = ARRAY_SIZE(effects_crisp);
     } else if (profile == "gentle") {
