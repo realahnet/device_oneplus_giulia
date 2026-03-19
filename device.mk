@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0-service \
     hwservicemanager
 
+# Init
+PRODUCT_PACKAGES += \
+    init.haptics.rc
+
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
