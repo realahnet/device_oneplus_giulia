@@ -11,4 +11,7 @@
     <!-- Hide VRR toggle -->
     <bool name="config_disableVrrSetting">true</bool>
 
+    <!-- Uses the legacy UDFPS enrollment UI with side text instead of a footer button. -->
+    <bool name="config_useLegacyUdfpsUi" translatable="false">true</bool>
+
 </resources>
