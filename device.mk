@@ -37,11 +37,6 @@ $(call soong_config_set,qtidisplay,sm8650_pxlw_vendor_namespace,vendor/oneplus/g
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display_id_4630946652107814787.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946652107814787.xml
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0-service \
-    hwservicemanager
-
 # Init
 PRODUCT_PACKAGES += \
     init.haptics.rc
@@ -85,9 +80,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/23867/build.IN.prop:$(TARGET_COPY_OUT_ODM)/etc/23867/build.IN.prop \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/23867/build.NA.prop:$(TARGET_COPY_OUT_ODM)/etc/23867/build.NA.prop \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/23867/build.default.prop:$(TARGET_COPY_OUT_ODM)/etc/23867/build.default.prop
-
-# Shipping API
-PRODUCT_SHIPPING_API_LEVEL := 35
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
