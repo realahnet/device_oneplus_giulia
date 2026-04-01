@@ -1565,14 +1565,6 @@ vendor/firmware/dpMSA.mbn
 # Dolby Vision
 odm/etc/dolby/display/dolby_vision.cfg
 odm/etc/dolby/dolby_vision.cfg
-odm/etc/media_codecs_dolby_vision.xml:vendor/etc/media_codecs_dolby_vision.xml
-odm/lib64/libdolbyclstc.so
-odm/lib64/libdolbydecoderprocessor.so
-odm/lib64/libdolbyeglcore.so
-odm/lib64/libdolbyencoderprocessor.so
-odm/lib64/libdolbyottcameracontrol.so
-odm/lib64/libqcodec2_dolbydecoderfilter.so
-odm/lib64/libqcodec2_dolbyencoderfilter.so
 vendor/etc/dolby_vision.cfg
 
 # EVA firmware
