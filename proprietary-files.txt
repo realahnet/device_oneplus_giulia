@@ -1565,7 +1565,9 @@ vendor/firmware/dpMSA.mbn
 # Dolby Vision
 odm/etc/dolby/display/dolby_vision.cfg
 odm/etc/dolby/dolby_vision.cfg
+system/etc/dolby_vision.cfg
 vendor/etc/dolby_vision.cfg
+vendor/persist/display/dolby_vision.cfg
 
 # EVA firmware
 vendor/firmware/evass-lt.b00
