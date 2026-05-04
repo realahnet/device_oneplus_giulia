@@ -40,4 +40,9 @@
         <item>1</item> <item>sd|hd|fhd</item>     <item>60</item>
         <item>2</item> <item>sd|hd|fhd|uhd</item> <item>60</item>
     </string-array>
+
+    <!-- Enable Oplus-specific super steady EIS for video recording.
+         Set to true on Oplus devices that support this vendor key. -->
+    <bool name="enable_oplus_video_stabilization">true</bool>
+
 </resources>
