@@ -92,6 +92,9 @@ odm/etc/oprec_audrec_params/oprec_record_ID99_Bypass.txt
 odm/etc/oprec_audrec_params/oprec_record_ID9_HE.bin
 odm/etc/oprec_audrec_params/oprec_record_ID9_HE.txt
 
+# Audio (Dolby)
+vendor/etc/dolby/dax-default.xml|c25b1edcad4aa485f07c8e0fb4a095b735854d3d
+
 # Camera
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
 odm/etc/camera/CaliData/mtStereoParams_golden.bin
