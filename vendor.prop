@@ -4,6 +4,10 @@ vendor.sensors.als_correction.grabrect=755 50 795 120
 # Bluetooth
 bluetooth.device.default_name=OnePlus 13R
 
+# Camera
+ro.vendor.oplus.market.enname=OnePlus 13R
+ro.vendor.oplus.market.name=OnePlus 13R
+
 # Graphics
 ro.surface_flinger.set_idle_timer_ms=500
 ro.surface_flinger.set_touch_timer_ms=1000
