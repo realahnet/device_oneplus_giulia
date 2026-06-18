@@ -1720,6 +1720,9 @@ vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 vendor/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
 
+# OPLUS Performance
+vendor/lib64/vendor.oplus.hardware.performance-V1-ndk_platform.so
+
 # Sensors
 vendor/lib64/libcwb_client_vendor.so
 vendor/lib64/sensors.qsh.so
