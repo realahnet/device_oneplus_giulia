@@ -886,7 +886,7 @@ odm/lib64/libFaceDistortionCorrection.so
 odm/lib64/libFilterWrapper.so
 odm/lib64/libHDRDetection.so
 odm/lib64/libHIS.so
-odm/lib64/libImageWarpMask.so;FIX_SONAME
+odm/lib64/libImageWarpMask.so
 odm/lib64/libODNN.so
 odm/lib64/libOGLManager.so
 odm/lib64/libOPAlgoCamAIBeautyBodyDetection.so
