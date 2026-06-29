@@ -1618,7 +1618,7 @@ vendor/firmware/evass.mdt
 
 # eUICC
 my_product/etc/permissions/EuiccGoogle_grant_permissions_list.xml:product/etc/permissions/privapp-permissions-euiccgoogle.xml
-my_product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED;NODEXPO
+my_product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # Fingerprint firmware
 odm/vendor/firmware/uff_jv.b00
@@ -1678,14 +1678,10 @@ odm/lib64/libQnnSystem.so
 odm/lib64/libaiboost.so
 odm/lib64/libaiboost_llm.so
 odm/lib64/libaiboost_qnn_external_delegate_te.so;FIX_SONAME
-odm/lib64/libaiboost_qnn_sr.so;FIX_SONAME
-odm/lib64/libaiboost_sr.so;FIX_SONAME
+odm/lib64/libaiboost_qnn_sr.so
+odm/lib64/libaiboost_sr.so
 odm/lib64/libaiboost_te.so;FIX_SONAME
-odm/lib64/libaiboost_ubwc.so;FIX_SONAME
-odm/lib64/libapsultrahdr.so
-odm/lib64/libarc.fusion.so
-odm/lib64/libarc.ion.so
-odm/lib64/libarcsoft_ai_moon.so
+odm/lib64/libaiboost_ubwc.so
 odm/lib64/libhta_hexagon_runtime_snpe.so
 
 # NFC
