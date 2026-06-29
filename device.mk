@@ -52,6 +52,9 @@ else
     PRODUCT_PACKAGES += op8650OpenDeltaOverlayVanilla
 endif
 
+# OPlus Camera
+$(call inherit-product-if-exists, vendor/oplus/camera/giulia/opluscamera.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage \
