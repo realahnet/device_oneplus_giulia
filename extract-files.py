@@ -75,7 +75,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock'),
+        .clear_symbol_version('AHardwareBuffer_unlock')
+        .replace_needed('libui.so', 'libui-stock.so'),
     'odm/lib64/libarcsoft_high_dynamic_range_v4.so': blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
@@ -110,6 +111,8 @@ blob_fixups: blob_fixups_user_type = {
     'odm/lib64/libBasicTonePhoto.so': blob_fixup()
         .binary_regex_replace(rb'vec4\(dstYuv\.r, dstYuv\.b, dstYuv\.g, 1\.0\)', b'vec4(dstYuv.r, dstYuv.g, dstYuv.b, 1.0)'),
     (
+        'odm/lib64/camera/components/com.oplus.node.sstabphoto.so',
+        'odm/lib64/hw/camera.oemlayer.so',
         'odm/lib64/libsharebuffer_impl.so',
     ): blob_fixup()
         .replace_needed('libui.so', 'libui-stock.so'),
