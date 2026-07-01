@@ -108,8 +108,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'odm/lib64/libImageWarpMask.so': blob_fixup()
         .fix_soname(),
-    'odm/lib64/libBasicTonePhoto.so': blob_fixup()
-        .binary_regex_replace(rb'vec4\(dstYuv\.r, dstYuv\.b, dstYuv\.g, 1\.0\)', b'vec4(dstYuv.r, dstYuv.g, dstYuv.b, 1.0)'),
     (
         'odm/lib64/camera/components/com.oplus.node.sstabphoto.so',
         'odm/lib64/hw/camera.oemlayer.so',
