@@ -144,18 +144,13 @@ odm/etc/camera/cfr_bin/CFR_imx906.bin
 odm/etc/camera/cfr_bin/CFR_s5kjn5_giulia.bin
 odm/etc/camera/config/camera_unit_config
 odm/etc/camera/config/camera_unit_feature_config.protobuf
-odm/etc/camera/config/imx355
 odm/etc/camera/config/imx480
-odm/etc/camera/config/imx906
-odm/etc/camera/config/oplus_camera_algo_switch_config
 odm/etc/camera/config/oplus_camera_algo_traversal_config.json
-odm/etc/camera/config/oplus_camera_aps_config
 odm/etc/camera/config/oplus_camera_config
 odm/etc/camera/config/oplus_camera_preview_decision_config.json
 odm/etc/camera/config/oplus_preview_decision_params.json
 odm/etc/camera/config/pickref_params.xml
 odm/etc/camera/config/quick_visibility_white_list
-odm/etc/camera/config/s5kjn5_giulia
 odm/etc/camera/config/video_beauty_default_config
 odm/etc/camera/dng/ColorMatrix1_imx581.txt
 odm/etc/camera/dng/ColorMatrix1_imx581_2.txt
@@ -1389,9 +1384,6 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 vendor/firmware/tof8801_firmware.bin
-
-# Camera (Fixups)
-odm/lib64/libui.so:vendor/lib64/libui-stock.so;FIX_SONAME
 
 # Display (Features)
 odm/etc/init/hw/init.oplus.display.rc

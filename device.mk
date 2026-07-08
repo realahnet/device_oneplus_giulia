@@ -25,6 +25,11 @@ TARGET_SCREEN_WIDTH := 1264
 # Camera
 $(call soong_config_set,libbinder,binder_vm_size_4mb,true)
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera/config/imx355:$(TARGET_COPY_OUT_ODM)/etc/camera/config/imx355 \
+    $(LOCAL_PATH)/configs/camera/config/imx906:$(TARGET_COPY_OUT_ODM)/etc/camera/config/imx906 \
+    $(LOCAL_PATH)/configs/camera/config/s5kjn5_giulia:$(TARGET_COPY_OUT_ODM)/etc/camera/config/s5kjn5_giulia \
+    $(LOCAL_PATH)/configs/camera/config/oplus_camera_algo_switch_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_algo_switch_config \
+    $(LOCAL_PATH)/configs/camera/config/oplus_camera_aps_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_aps_config \
     $(LOCAL_PATH)/configs/camera/CameraHWConfiguration.config:$(TARGET_COPY_OUT_ODM)/etc/camera/CameraHWConfiguration.config
 
 # Display
@@ -51,9 +56,6 @@ ifeq ($(TARGET_BUILD_GAPPS),true)
 else
     PRODUCT_PACKAGES += op8650OpenDeltaOverlayVanilla
 endif
-
-# OPlus Camera
-$(call inherit-product-if-exists, vendor/oplus/camera/giulia/opluscamera.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
