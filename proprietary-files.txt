@@ -881,7 +881,7 @@ odm/lib64/libFaceDistortionCorrection.so
 odm/lib64/libFilterWrapper.so
 odm/lib64/libHDRDetection.so
 odm/lib64/libHIS.so
-odm/lib64/libImageWarpMask.so
+odm/lib64/libImageWarpMask.so;FIX_SONAME
 odm/lib64/libODNN.so
 odm/lib64/libOGLManager.so
 odm/lib64/libOPAlgoCamAIBeautyBodyDetection.so
@@ -1646,6 +1646,27 @@ vendor/firmware/qps615_fw.bin
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
+
+# Face unlock
+odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service_uff
+odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_face.xml
+odm/lib64/libstfaceunlockocl_uff.so
+odm/init.oplus.face.rc
+vendor/lib64/libcamera2ndk_vendor.so
+
+# Face unlock firmware
+odm/vendor/firmware/uff_face.b00
+odm/vendor/firmware/uff_face.b05
+odm/vendor/firmware/uff_face.b03
+odm/vendor/firmware/uff_face.mdt
+odm/vendor/firmware/uff_face.b07
+odm/vendor/firmware/uff_face.b08
+odm/vendor/firmware/uff_face.b01
+odm/vendor/firmware/uff_face.b04
+odm/vendor/firmware/uff_face.b02
+odm/vendor/firmware/uff_face.b06
+odm/vendor/firmware/uff_face.mdt
 
 # Neural networks
 odm/lib64/aiboost/libQnnHtp.so;MODULE_SUFFIX=.aiboost
