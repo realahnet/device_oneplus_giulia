@@ -109,6 +109,9 @@ blob_fixups: blob_fixups_user_type = {
     'odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service_uff': blob_fixup()
         .add_needed('libbase_shim.so'),
 
+    'odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc': blob_fixup()
+        .regex_replace(r'(group system input\n)', r'\1    task_profiles ProcessCapacityHigh MaxPerformance\n'),
+
     'vendor/lib64/libcamera2ndk_vendor.so': blob_fixup()
         .replace_needed('android.frameworks.cameraservice.device-V1-ndk.so', 'android.frameworks.cameraservice.device-V3-ndk.so')
         .replace_needed('android.frameworks.cameraservice.service-V1-ndk.so', 'android.frameworks.cameraservice.service-V3-ndk.so'),
