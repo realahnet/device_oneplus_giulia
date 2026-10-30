@@ -397,12 +397,24 @@ static const int8_t primitive_7_gentle[] = {
 };
 
 static const int8_t primitive_8[] = {
-       0,     0,     0,     0,     1,     1,     2,     2,     2,     2,     3,     3,     5,     6,     6,     8,
-       9,    12,    13,    16,    18,    20,    23,    26,    29,    33,    36,    38,    42,    45,    48,    49,
-      51,    54,    54,    56,    57,    58,    58,    58,    57,    56,    54,    54,    51,    49,    48,    45,
-      42,    38,    36,    33,    30,    26,    23,    20,    18,    16,    13,    12,     9,     8,     6,     6,
-       5,     3,     3,     2,     2,     2,     2,     1,     1,     0,     0,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,
+     0,      0,      0,      0,      1,      1,      2,      2,      3,      4,      4,      5,      6,      7,      8,      9,
+    11,     12,     13,     14,     16,     17,     18,     20,     21,     23,     24,     25,     27,     28,     29,     30,
+    32,     33,     34,     35,     36,     37,     37,     38,     39,     39,     40,     40,     40,     40,     40,     40,
+    39,     39,     38,     38,     37,     36,     35,     34,     32,     31,     29,     28,     26,     24,     22,     20,
+    17,     15,     12,     10,      7,      4,      2,     -1,     -4,     -7,    -10,    -13,    -16,    -20,    -23,    -26,
+   -29,    -32,    -35,    -38,    -41,    -44,    -47,    -50,    -53,    -56,    -59,    -61,    -64,    -66,    -68,    -71,
+   -73,    -75,    -76,    -78,    -79,    -81,    -82,    -83,    -84,    -84,    -85,    -85,    -85,    -85,    -85,    -84,
+   -84,    -83,    -82,    -81,    -79,    -78,    -76,    -74,    -72,    -70,    -67,    -65,    -62,    -59,    -56,    -53,
+   -50,    -47,    -43,    -40,    -36,    -32,    -29,    -25,    -21,    -17,    -13,     -9,     -5,     -1,      3,      7,
+    11,     15,     19,     23,     27,     31,     35,     38,     42,     45,     49,     52,     55,     58,     61,     64,
+    66,     69,     71,     73,     75,     77,     78,     80,     81,     82,     83,     84,     84,     84,     84,     84,
+    84,     84,     83,     82,     82,     80,     79,     78,     76,     75,     73,     71,     69,     66,     64,     62,
+    59,     56,     54,     51,     48,     45,     42,     39,     36,     33,     30,     27,     23,     20,     17,     14,
+    11,      8,      5,      2,     -1,     -3,     -6,     -9,    -11,    -14,    -16,    -18,    -21,    -23,    -25,    -26,
+   -28,    -30,    -31,    -33,    -34,    -35,    -36,    -37,    -37,    -38,    -38,    -39,    -39,    -39,    -39,    -39,
+   -38,    -38,    -38,    -37,    -36,    -36,    -35,    -34,    -33,    -32,    -31,    -30,    -28,    -27,    -26,    -25,
+   -23,    -22,    -21,    -19,    -18,    -16,    -15,    -14,    -13,    -11,    -10,     -9,     -8,     -7,     -6,     -5,
+    -4,     -3,     -3,     -2,     -1,     -1,     -1,      0,      0,      0,
 };
 
 static const struct effect_stream primitives[] = {
@@ -545,5 +557,65 @@ static const struct effect_stream primitives_gentle[] = {
         .length = ARRAY_SIZE(primitive_8),
         .play_rate_hz = 24000,
         .data = primitive_8,
+    },
+};
+
+/* Dedicated 170 Hz primitive waveforms used by the "default" profile.
+ * effect_id carries PRIMITIVE_ID_MASK (0x8000) so that play(stream->effect_id)
+ * re-enters get_effect_stream()'s primitive branch and resolves to this entry. */
+static const struct effect_stream primitives_default[] = {
+    {
+        .effect_id = 0x8000 | 0,
+        .length = ARRAY_SIZE(primitive_0),
+        .play_rate_hz = 24000,
+        .data = primitive_0,
+    },
+    {
+        .effect_id = 0x8000 | 1, /* CLICK */
+        .length = ARRAY_SIZE(tune_click),
+        .play_rate_hz = 24000,
+        .data = tune_click,
+    },
+    {
+        .effect_id = 0x8000 | 2, /* THUD */
+        .length = ARRAY_SIZE(tune_thud),
+        .play_rate_hz = 24000,
+        .data = tune_thud,
+    },
+    {
+        .effect_id = 0x8000 | 3, /* SPIN */
+        .length = ARRAY_SIZE(tune_spin),
+        .play_rate_hz = 24000,
+        .data = tune_spin,
+    },
+    {
+        .effect_id = 0x8000 | 4, /* QUICK_RISE */
+        .length = ARRAY_SIZE(tune_rise_quick),
+        .play_rate_hz = 24000,
+        .data = tune_rise_quick,
+    },
+    {
+        .effect_id = 0x8000 | 5, /* SLOW_RISE */
+        .length = ARRAY_SIZE(tune_rise_slow),
+        .play_rate_hz = 24000,
+        .data = tune_rise_slow,
+    },
+    {
+        .effect_id = 0x8000 | 6, /* QUICK_FALL */
+        .length = ARRAY_SIZE(tune_fall_quick),
+        .play_rate_hz = 24000,
+        .data = tune_fall_quick,
+    },
+    {
+        .effect_id = 0x8000 | 7, /* LIGHT_TICK */
+        .length = ARRAY_SIZE(primitive_7),
+        .play_rate_hz = 24000,
+        .data = primitive_7,
+    },
+    {
+        .effect_id = 0x8000 | 8, /* LOW_TICK */
+        .length = ARRAY_SIZE(tune_low_tick),
+        .play_rate_hz = 24000,
+        .data = tune_low_tick,
     },
 };

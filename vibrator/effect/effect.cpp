@@ -55,11 +55,14 @@ const struct effect_stream* get_effect_stream(uint32_t effect_id) {
     std::string profile = GetProperty("persist.vendor.haptic_profile", "default");
 
     if ((effect_id & 0x8000) != 0) {
-        effect_id &= 0x7fff;
+        uint32_t primitive_id = effect_id & 0x7fff;
         if (profile == "gentle" || profile == "op13gentle") {
-            return find_effect(primitives_gentle, ARRAY_SIZE(primitives_gentle), effect_id);
+            return find_effect(primitives_gentle, ARRAY_SIZE(primitives_gentle), primitive_id);
+        } else if (profile == "default") {
+            return find_effect(primitives_default, ARRAY_SIZE(primitives_default), effect_id);
         } else {
-            return find_effect(primitives, ARRAY_SIZE(primitives), effect_id);
+            /* soft / crisp / op13crisp / richtap keep the legacy stock mapping */
+            return find_effect(primitives, ARRAY_SIZE(primitives), primitive_id);
         }
     }
 
