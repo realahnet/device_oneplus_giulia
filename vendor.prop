@@ -1,6 +1,9 @@
 # ALS
 vendor.sensors.als_correction.grabrect=755 50 795 120
 
+# Audio
+ro.audio.monitorRotation=true
+
 # Bluetooth
 bluetooth.device.default_name=OnePlus 13R
 
