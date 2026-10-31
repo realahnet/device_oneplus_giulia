@@ -15,5 +15,8 @@ ro.vendor.oplus.market.name=OnePlus 13R
 ro.surface_flinger.set_idle_timer_ms=500
 ro.surface_flinger.set_touch_timer_ms=1000
 
+# Touch
+persist.vendor.touch.hbp_pipeline=0
+
 # USB
 vendor.usb.product_string=OnePlus 13R
