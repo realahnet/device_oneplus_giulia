@@ -41,7 +41,6 @@ odm/vendor/firmware/antdtx.mdt
 odm/lib64/liboprec_audrec.so
 odm/lib64/liboprec_audrec_wrapper.so
 odm/lib64/libtfa98xx.so
-vendor/etc/mem_logger_config.xml
 
 # Audio configs
 odm/etc/mixer_paths.xml;SYMLINK=vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
