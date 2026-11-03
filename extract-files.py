@@ -130,12 +130,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.frameworks.cameraservice.device-V1-ndk.so', 'android.frameworks.cameraservice.device-V3-ndk.so')
         .replace_needed('android.frameworks.cameraservice.service-V1-ndk.so', 'android.frameworks.cameraservice.service-V3-ndk.so'),
 
-    'odm/etc/resourcemanager.xml': blob_fixup()
-        .regex_replace(
-            r'(<speaker_protection_enabled>)1(</speaker_protection_enabled>)',
-            r'\g<1>0\g<2>',
-        ),
-
     'vendor/etc/audio/sku_pineapple/audio_policy_configuration.xml': blob_fixup()
         .regex_replace(r'(?m)^.*Bluetooth Audio HAL for hearing aid.*\n', '')
         .regex_replace(r'(?m)^.*bluetooth_qti_hearing_aid_audio_policy_configuration\.xml.*\n', ''),
