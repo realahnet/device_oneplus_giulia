@@ -16,6 +16,7 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
+from patches.camera_flash_strength_fixup import patch_camera_flash_strength_file
 
 namespace_imports = [
     'hardware/oplus',
@@ -49,7 +50,19 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_vendor_suffix,
 }
 
+
+def blob_fixup_camera_flash_strength(ctx, file, file_path, *args, **kwargs):
+    # OxygenOS 15's camx hardcodes FlashInfoStrengthMaximumLevel = 164 for
+    # every device. OxygenOS 16 gates it behind the ThreeLED config and
+    # uses 4 otherwise; giulia is dual-LED, so cap the level count at 4
+    # to match stock OxygenOS 16 and the FlashLightCurrent table. Blobs
+    # that already carry the OxygenOS 16 gate are left untouched.
+    patch_camera_flash_strength_file(file_path)
+
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .call(blob_fixup_camera_flash_strength),
+
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
         .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),

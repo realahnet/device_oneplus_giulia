@@ -1182,7 +1182,7 @@ vendor/lib64/camera/imx809_3.pb|8d1b2a5e480c251d742462eb4c8e1c217cc71827
 vendor/lib64/camera/s5k3p9_2.pb|d6129ce60b981e0eaa5bb62f2a3592b235bca77e
 vendor/lib64/camera/s5k3p9_3.pb|034f94014dbf34555617554b1d3c2ead27c8d0a9
 vendor/lib64/hw/camera.qcom.sm8650.so|02e72f09e330e40603c9ae28969a4fc10c916c82
-vendor/lib64/hw/camera.qcom.so|a37e5243ed538fdda615ff8b193f5373c1394a1c
+vendor/lib64/hw/camera.qcom.so|a37e5243ed538fdda615ff8b193f5373c1394a1c|2f41f88aa4ef7e69c92d057b0db2e3413f85505b
 vendor/lib64/hw/com.qti.chi.offline.so|2def9ae701d8871fcb908c0e7d03e961d1ebdfdc
 vendor/lib64/hw/com.qti.chi.override.so;DISABLE_DEPS|0831ac6c60833ebecc2d41eae18b0d7a54c8fde1
 vendor/lib64/bm3b68v04s12n53.bin|66506830b6b020d785f8036b50d043186bec125a
